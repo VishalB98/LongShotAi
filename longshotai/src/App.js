@@ -7,6 +7,7 @@ import { useEffect } from 'react';
 import intentMap from './data/intentMap';
 import KeywordHeader from './components/KeywordHeader';
 import KeywordMetrics from './components/KeywordMetrics';
+import KeywordTable from './components/KeywordTable';
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
       <div className="App bg-slate-100">
         <KeywordHeader />
         <KeywordMetrics/>
+        <KeywordTable />
       </div>
     </Provider>
   );

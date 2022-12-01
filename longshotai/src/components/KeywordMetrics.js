@@ -9,7 +9,7 @@ function KeywordMetrics(props) {
     console.log(keywordMetric, keywordDifficulty)
     return (
         <div className='flex justify-center'>
-            <div className='flex justify-around w-[50%]'>
+            <div className='flex justify-around sm:w-[100%] md:w-[80%] lg:w-[70%] xl:w-[60%] '>
                 <div className=' flex flex-col justify-around w-[45%] rounded-md p-2 h-[40vh] bg-slate-50'>
                     <div className='flex flex-col justify-around items-start p-2'>
                         <p>Volume</p>
