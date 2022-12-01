@@ -1,6 +1,6 @@
 import './App.css';
 import store from './redux/store';
-import { fetchJsonData, setKeywordResult, setIntentMap, setKeywordDifficulty, setSearchFilter} from './redux/action';
+import { fetchJsonData, setKeywordResult, setIntentMap, setKeywordDifficulty, setSearchFilter, setKeywordMetric} from './redux/action';
 import { Provider } from 'react-redux';
 import keywordData from './data/keywordData.json';
 import { useEffect } from 'react';
@@ -16,6 +16,7 @@ function App() {
       await store.dispatch(setIntentMap(intentMap[store.getState().keywordResult[0][2]]))
       await store.dispatch(setKeywordDifficulty(store.getState().keywordResult[0][7]))
       await store.dispatch(setSearchFilter("raw_broadmatch_data"))
+      await store.dispatch(setKeywordMetric(store.getState().keywordResult[0]))
     })();
   }, []);
 

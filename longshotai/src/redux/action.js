@@ -1,4 +1,4 @@
-import {FETCH_JSON_DATA, SET_KEYWORD_RESULT,SET_INTENT_MAP, SET_KEYWORD_DIFFICULTY,SET_SEARCH_FILTER } from './constant';
+import {FETCH_JSON_DATA, SET_KEYWORD_RESULT,SET_INTENT_MAP, SET_KEYWORD_DIFFICULTY,SET_SEARCH_FILTER,SET_KEYWORD_METRIC } from './constant';
 
 export function fetchJsonData(payload) {
   return (dispatch) => {
@@ -73,5 +73,11 @@ export function setKeywordDifficulty(payload) {
 export function setSearchFilter(payload) {
     return (dispatch) => {
         dispatch({ type: SET_SEARCH_FILTER, payload });
+    };
+}
+
+export function setKeywordMetric(payload) {
+    return (dispatch) => {
+        dispatch({ type: SET_KEYWORD_METRIC, payload });
     };
 }

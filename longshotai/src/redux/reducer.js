@@ -1,18 +1,10 @@
 const initialState = {
     apiJsonData: null,
     keywordResult:[],
-    intentMap:{
-        type: "",
-        "hover-text": "",
-        color: {},
-    },
-    keywordDifficulty: {
-        rating: "",
-        text:"",
-        color: "",
-    },
+    intentMap: null,
+    keywordDifficulty:null,
     searchFilter: "",
-
+    keywordMetric: null,
 }
 
 const reducer = (state = initialState, action) => {
@@ -41,6 +33,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 searchFilter: action.payload,
+            };
+        case 'SET_KEYWORD_METRIC':
+            return {
+                ...state,
+                keywordMetric: action.payload,
             };
         default:
             return state
