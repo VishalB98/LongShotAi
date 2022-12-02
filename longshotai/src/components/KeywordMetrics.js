@@ -9,8 +9,8 @@ function KeywordMetrics(props) {
     console.log(keywordMetric, keywordDifficulty)
     return (
         <div className='flex justify-center'>
-            <div className='flex justify-around sm:w-[100%] md:w-[80%] lg:w-[70%] xl:w-[60%] '>
-                <div className=' flex flex-col justify-around w-[45%] rounded-md p-2 h-[40vh] bg-slate-50'>
+            <div className='flex items-center flex-col lg:flex-row lg:justify-around xl:flex-row xl:justify-around md:flex-row md:justify-around sm:w-[100%] md:w-[80%] lg:w-[70%] xl:w-[60%]'>
+                <div className=' flex flex-col justify-around md:w-[45%] lg:w-[45%] xl:w-[45%] w-[90%] rounded-md p-2 h-[40vh] bg-slate-50'>
                     <div className='flex flex-col justify-around items-start p-2'>
                         <p>Volume</p>
                         <p>{keywordMetric ? keywordMetric[1] : "Loading"}</p>
@@ -36,7 +36,7 @@ function KeywordMetrics(props) {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col justify-between w-[45%] h-[40vh]'>
+                <div className='flex flex-col justify-between md:w-[45%] lg:w-[45%] xl:w-[45%] w-[90%] h-[40vh] pt-4 md:pt-0 lg:pt-0 xl:pt-0'>
                     <div className='flex flex-col justify-around items-start p-2 bg-slate-50 rounded-md h-[30%]'>
                         <p>Intent</p>
                         <div>

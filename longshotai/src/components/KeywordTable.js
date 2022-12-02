@@ -66,35 +66,38 @@ function KeywordTable(props) {
     }
 
     return (
-        <div className='flex flex-col justify-center items-center'>
-            <div className='p-6 pb-2 flex justify-between sm:w-[100%] md:w-[80%] lg:w-[70%] xl:w-[60%]'>
-                <div className='flex justify-start'>
-                    <div className='p-2 rounded-l-md border-r-2 border-gray-300 cursor-pointer' style={{
-                        backgroundColor: searchFilter === 'raw_broadmatch_data' ? '#bfe3ff' : '#e2e8f0'
-                    }}
-                    onClick={() => {setFilter('raw_broadmatch_data')}}
-                    >
-                        Broad Match
+        <>
+        <div className='flex justify-center'>
+            <div className='p-6 pb-2 flex justify-between w-full sm:w-[100%] md:w-[80%] lg:w-[70%] xl:w-[60%]'>
+                    <div className='flex justify-start'>
+                        <div className='p-2 rounded-l-md border-r-2 border-gray-300 cursor-pointer' style={{
+                            backgroundColor: searchFilter === 'raw_broadmatch_data' ? '#bfe3ff' : '#e2e8f0'
+                        }}
+                        onClick={() => {setFilter('raw_broadmatch_data')}}
+                        >
+                            Broad Match
+                        </div>
+                        <div className='p-2 cursor-pointer' style={{
+                            backgroundColor: searchFilter === 'raw_related_data' ? '#bfe3ff' : '#e2e8f0'
+                        }}
+                        onClick={() => {setFilter('raw_related_data')}}
+                        >
+                            Realted
+                        </div>
+                        <div className='bg-slate-200 p-2 rounded-r-md border-l-2 border-gray-300 cursor-pointer' style={{
+                            backgroundColor: searchFilter === 'raw_question_data' ? '#bfe3ff' : '#e2e8f0'
+                        }}
+                        onClick={() => {setFilter('raw_question_data')}}
+                        > 
+                            Questions
+                        </div>
                     </div>
-                    <div className='p-2 cursor-pointer' style={{
-                        backgroundColor: searchFilter === 'raw_related_data' ? '#bfe3ff' : '#e2e8f0'
-                    }}
-                    onClick={() => {setFilter('raw_related_data')}}
-                    >
-                        Realted
+                    <div className='bg-[#7114f4] text-white p-2 rounded-md'>
+                        Add to List
                     </div>
-                    <div className='bg-slate-200 p-2 rounded-r-md border-l-2 border-gray-300 cursor-pointer' style={{
-                        backgroundColor: searchFilter === 'raw_question_data' ? '#bfe3ff' : '#e2e8f0'
-                    }}
-                    onClick={() => {setFilter('raw_question_data')}}
-                    > 
-                        Questions
-                    </div>
-                </div>
-                <div className='bg-[#7114f4] text-white p-2 rounded-md'>
-                    Add to List
-                </div>
             </div>
+        </div>
+        <div className='flex flex-col justify-center items-center overflow-x-auto'>
             <div className="table-auto flex justify-center p-4 sm:w-[100%] md:w-[80%] lg:w-[70%] xl:w-[60%]">
                 <table className="border w-full p-2">
                     <thead>
@@ -134,6 +137,7 @@ function KeywordTable(props) {
                 </table>
             </div>
         </div>
+        </>
     )
 }
 
