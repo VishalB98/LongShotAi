@@ -6,14 +6,14 @@ function KeywordHeader(props) {
     return (
         <div className='flex flex-col justify-around items-start align-middle p-4'>
             <div className='flex pb-4'>
-                <p>Keyword Explorer</p>{'>'}<p>Keyword Overview</p>
+                <p className='text-gray-600  font-medium'>Keyword Explorer</p>{'>'}<p className='text-gray-600  font-normal'>Keyword Overview</p>
             </div>
             <div className='flex flex-col pb-4 '>
-                <div className='flex' >
-                    <p>Keyword:</p><p>{apiJsonData ?  apiJsonData.topic : "Loading"}</p>
+                <div className='flex items-center ' >
+                    <p className='font-bold text-xl'>Keyword: &nbsp;</p><p className=' text-gray-600  font-medium'>{apiJsonData ?  apiJsonData.topic : "Loading"}</p>
                 </div>
                 <div className='flex'>
-                    <p>Database:</p><p>{apiJsonData ? apiJsonData.country : "Loading"}</p>
+                    <p className='text-gray-600  font-medium'>Database: &nbsp;</p><p className='text-gray-600  font-medium'>{apiJsonData ? apiJsonData.country : "Loading"}</p>
                 </div>
             </div>
         </div>
